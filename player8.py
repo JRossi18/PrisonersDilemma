@@ -10,6 +10,8 @@ class Player8:
        
     
    #Defining functions for each child(instance) of class Car
+
+       
    def strategy(self,history, opponent_history, score, opponent_score, getting_team_name):
         if getting_team_name:
             #if there was a previous round just like 
@@ -38,5 +40,11 @@ class Player8:
                     return 'b' # betray is they were severely punished last time
                 else:
                     return 'c' #otherwise collude
+                if score<0:
+                    return 'b'
+    def get_action(player,history,opponent_history,score,opponent_score,getting_team_name=False):
+        if player==2:
+            return 'b'
+            
 
 
