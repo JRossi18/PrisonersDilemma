@@ -13,7 +13,7 @@ class Player8:
    def strategy(self,history, opponent_history, score, opponent_score, getting_team_name):
         if getting_team_name:
             #if there was a previous round just like 
-            return 'loyal vengeful with permanent second impression'
+            return 'Team Name TBD'
         else:
             # use history, opponent_history, score, opponent_score
             # to compute your strategy      
