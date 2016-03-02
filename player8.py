@@ -13,7 +13,7 @@ class Player8:
    def strategy(self,history, opponent_history, score, opponent_score, getting_team_name):
         if getting_team_name:
             #if there was a previous round just like 
-            return 'loyal vengeful with permanent second impression'
+            return 'Team Name TBD'
         else:
             # use history, opponent_history, score, opponent_score
             # to compute your strategy      
@@ -33,10 +33,13 @@ class Player8:
                     if (prior_round_me == recent_round_me) and \
                             (prior_round_opponent == recent_round_opponent):
                         return opponent_history[round]
-                # no match found
-                if history[-1]=='c' and opponent_history[-1]=='b':
+                   if history[-1]=='c' and opponent_history[-1]=='b':
                     return 'b' # betray is they were severely punished last time
                 else:
                     return 'c' #otherwise collude
-
+                if score<0:
+                    return 'b'
+def get_action(player,history,opponent_history,score,opponent_score,getting_team_name=False):
+    if player==2:
+        return 'b'
 
